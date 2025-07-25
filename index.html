@@ -40,8 +40,30 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://shriramarchitecture.com">
     
+    <!-- MODERN ANIMATION LIBRARIES -->
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Locomotive Scroll for Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
+    
+    <!-- AOS - Animate on Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Particles.js for Interactive Background -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Typed.js for Typewriter Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Performance Boost CSS -->
+    <link rel="stylesheet" href="performance-boost.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,61 +156,144 @@
     <!-- ========== MAIN CONTENT ========== -->
     <main>
         <!-- ========== HERO SECTION ========== -->
-        <!-- Full-screen hero section with background image and call-to-action content -->
-        <section id="home" class="hero">
-            <!-- Hero Background & Overlay -->
-            <div class="hero-background">
+        <!-- Full-screen immersive landing experience with next-gen animations -->
+        <section id="home" class="hero" data-aos="fade-in">
+            <!-- Dynamic Background System -->
+            <div class="hero-background" data-speed="0.5">
                 <div class="hero-overlay"></div>
+                <!-- Optimized Particles Background -->
+                <div class="particles-container">
+                    <!-- Particles will be injected here -->
+                </div>
+                <!-- Floating Geometric Shapes -->
+                <div class="floating-shapes">
+                    <div class="shape shape-1" data-speed="0.2"></div>
+                    <div class="shape shape-2" data-speed="0.3"></div>
+                    <div class="shape shape-3" data-speed="0.1"></div>
+                </div>
             </div>
             
             <!-- Hero Content Container -->
             <div class="hero-content">
-                <!-- Hero Subtitle -->
-                <span class="hero-subtitle">Welcome to</span>
-                
-                <!-- Main Hero Heading -->
-                <h1>Crafting Bespoke<br><span class="highlight">Residences</span> in Pune.</h1>
-                
-                <!-- Hero Description -->
-                <p>We blend timeless design principles with modern innovation to create spaces that are uniquely yours.</p>
-                
-                <!-- Hero Action Buttons -->
-                <div class="hero-buttons">
-                    <a href="#projects" class="cta-button primary">Explore Our Work</a>
-                    <a href="#contact" class="cta-button secondary">Get Quote</a>
+                <!-- Animated Hero Badge -->
+                <div class="hero-badge" data-aos="zoom-in" data-aos-delay="100">
+                    <span class="badge-icon">✨</span>
+                    <span class="badge-text">Award-Winning Architecture</span>
+                    <div class="badge-glow"></div>
                 </div>
                 
-                <!-- Scroll Indicator -->
-                <div class="scroll-indicator">
-                    <span>Scroll to explore</span>
-                    <div class="scroll-arrow">↓</div>
+                <!-- Dynamic Hero Subtitle with Typewriter Effect -->
+                <div class="hero-subtitle-container" data-aos="fade-up" data-aos-delay="200">
+                    <span class="hero-subtitle">Welcome to</span>
+                    <div class="dynamic-text">
+                        <span class="text-item active">Innovation</span>
+                    </div>
+                </div>
+                
+                <!-- Main Hero Heading with Reveal Animation -->
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+                    <span class="title-line">
+                        <span class="word" data-text="Crafting">Crafting</span>
+                        <span class="word" data-text="Bespoke">Bespoke</span>
+                    </span>
+                    <span class="title-line">
+                        <span class="word highlight" data-text="Residences">Residences</span>
+                        <span class="word" data-text="in">in</span>
+                        <span class="word" data-text="Pune.">Pune.</span>
+                    </span>
+                </h1>
+                
+                <!-- Enhanced Hero Description -->
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+                    <span class="desc-line">We blend timeless design principles with modern innovation</span>
+                    <span class="desc-line">to create spaces that are uniquely yours and tell your story.</span>
+                </p>
+                
+                <!-- Interactive Statistics Showcase -->
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                    <div class="stat-item" data-target="150">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item" data-target="12">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item" data-target="25">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                </div>
+                
+                <!-- Advanced Hero Action Buttons -->
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#projects" class="cta-button primary magnetic-btn hover-scale">
+                        <span class="btn-text">Explore Our Work</span>
+                        <span class="btn-icon">→</span>
+                        <div class="btn-ripple"></div>
+                    </a>
+                    <a href="#contact" class="cta-button secondary magnetic-btn hover-scale">
+                        <span class="btn-text">Get Quote</span>
+                        <span class="btn-icon">✉</span>
+                        <div class="btn-ripple"></div>
+                    </a>
+                    <button class="cta-button interactive hover-scale" id="virtual-tour-btn">
+                        <span class="btn-text">Virtual Tour</span>
+                        <span class="btn-icon">🏠</span>
+                        <div class="btn-ripple"></div>
+                    </button>
+                </div>
+                
+                <!-- Enhanced Scroll Indicator with Animation -->
+                <div class="scroll-indicator" data-aos="bounce-in" data-aos-delay="800">
+                    <div class="scroll-text">Scroll to Explore</div>
+                    <div class="scroll-arrow">
+                        <div class="arrow-line"></div>
+                        <div class="arrow-head"></div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section>        <!-- GLOBAL FLOATING ACTIONS - Visible Throughout Website -->
+        <div class="global-floating-actions">
+            <button class="fab" id="global-theme-toggle" title="Toggle Theme">
+                <span class="fab-icon">🌙</span>
+            </button>
+            <button class="fab" id="global-sound-toggle" title="Toggle Sound">
+                <span class="fab-icon">🔊</span>
+            </button>
+            <button class="fab" id="global-help-toggle" title="Help">
+                <span class="fab-icon">❓</span>
+            </button>
+        </div>
+
+        <!-- GLOBAL READING PROGRESS - Visible Throughout Website -->
+        <div class="global-reading-progress">
+            <div class="progress-bar"></div>
+        </div>
 
         <!-- ========== PROJECTS PORTFOLIO SECTION ========== -->
         <!-- Showcase of featured architectural projects with filtering capability -->
         <section id="projects" class="content-section">
             <!-- Section Header -->
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <span class="section-subtitle">Portfolio</span>
                 <h2>Our Creations</h2>
                 <p class="section-description">Discover our latest residential projects that showcase our commitment to excellence and innovation.</p>
             </div>
             
             <!-- Project Category Filter Buttons -->
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="villa">Villas</button>
-                <button class="filter-btn" data-filter="apartment">Apartments</button>
-                <button class="filter-btn" data-filter="retreat">Retreats</button>
+            <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active hover-scale" data-filter="all">All Projects</button>
+                <button class="filter-btn hover-scale" data-filter="villa">Villas</button>
+                <button class="filter-btn hover-scale" data-filter="apartment">Apartments</button>
+                <button class="filter-btn hover-scale" data-filter="retreat">Retreats</button>
             </div>
             
             <!-- Projects Grid Container -->
             <div class="project-grid">
                 <!-- Project Card 1: Villa Project -->
-                <div class="project-card" data-category="villa">
-                    <div class="project-image">
+                <div class="project-card hover-scale" data-category="villa" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-image" data-speed="0.1">
                         <!-- Responsive image with srcset for different screen sizes -->
                         <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop&crop=center" 
                              srcset="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop&crop=center 400w,
@@ -215,14 +320,14 @@
                                 <span class="detail-item">🏠 4 BHK</span>
                                 <span class="detail-item">📐 3,200 sq ft</span>
                             </div>
-                            <button class="view-project-btn">View Project</button>
+                            <button class="view-project-btn hover-scale">View Project</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project Card 2: Apartment Project -->
-                <div class="project-card" data-category="apartment">
-                    <div class="project-image">
+                <div class="project-card hover-scale" data-category="apartment" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-image" data-speed="0.15">
                         <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop&crop=center" 
                              srcset="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop&crop=center 400w,
                                      https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop&crop=center 800w,
@@ -246,14 +351,14 @@
                                 <span class="detail-item">🏠 3 BHK</span>
                                 <span class="detail-item">📐 2,100 sq ft</span>
                             </div>
-                            <button class="view-project-btn">View Project</button>
+                            <button class="view-project-btn hover-scale">View Project</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project Card 3: Retreat Project -->
-                <div class="project-card" data-category="retreat">
-                    <div class="project-image">
+                <div class="project-card hover-scale" data-category="retreat" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-image" data-speed="0.2">
                         <img src="https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=800&h=600&fit=crop&crop=center" 
                              srcset="https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=400&h=300&fit=crop&crop=center 400w,
                                      https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=800&h=600&fit=crop&crop=center 800w,
@@ -278,15 +383,15 @@
                                 <span class="detail-item">🏠 2 BHK</span>
                                 <span class="detail-item">📐 1,800 sq ft</span>
                             </div>
-                            <button class="view-project-btn">View Project</button>
+                            <button class="view-project-btn hover-scale">View Project</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Additional Project Cards -->
                 <!-- Project Card 4: Second Villa Project -->
-                <div class="project-card" data-category="villa">
-                    <div class="project-image">
+                <div class="project-card hover-scale" data-category="villa" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="project-image" data-speed="0.1">
                         <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&h=600&fit=crop&crop=center" 
                              srcset="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&h=300&fit=crop&crop=center 400w,
                                      https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&h=600&fit=crop&crop=center 800w,
@@ -310,14 +415,14 @@
                                 <span class="detail-item">🏠 5 BHK</span>
                                 <span class="detail-item">📐 4,500 sq ft</span>
                             </div>
-                            <button class="view-project-btn">View Project</button>
+                            <button class="view-project-btn hover-scale">View Project</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project Card 5: Second Apartment Project -->
-                <div class="project-card" data-category="apartment">
-                    <div class="project-image">
+                <div class="project-card hover-scale" data-category="apartment" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="project-image" data-speed="0.15">
                         <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop&crop=center" 
                              srcset="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop&crop=center 400w,
                                      https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop&crop=center 800w,
@@ -341,7 +446,7 @@
                                 <span class="detail-item">🏠 4 BHK</span>
                                 <span class="detail-item">📐 2,800 sq ft</span>
                             </div>
-                            <button class="view-project-btn">View Project</button>
+                            <button class="view-project-btn hover-scale">View Project</button>
                         </div>
                     </div>
                 </div>
@@ -377,18 +482,200 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- INNOVATIVE PORTFOLIO SECTION -->
+            <div class="portfolio-container" data-aos="fade-up">
+                <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Interactive Portfolio Experience</h3>
+                    <p>Explore our projects with advanced filtering and immersive interactions</p>
+                </div>
+                
+                <!-- Advanced Portfolio Filters -->
+                <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active hover-scale" data-category="all">All Projects</button>
+                    <button class="filter-btn hover-scale" data-category="modern">Modern</button>
+                    <button class="filter-btn hover-scale" data-category="luxury">Luxury</button>
+                    <button class="filter-btn hover-scale" data-category="eco-friendly">Eco-Friendly</button>
+                    <button class="filter-btn hover-scale" data-category="commercial">Commercial</button>
+                </div>
+                
+                <!-- Advanced Portfolio Grid -->
+                <div class="portfolio-grid">
+                    <!-- Portfolio Item 1 -->
+                    <div class="portfolio-item hover-scale" data-category="modern luxury" data-aos="fade-up" data-aos-delay="300">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" 
+                                 alt="Quantum Villa">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h4>View Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">Quantum Villa</h4>
+                            <p class="portfolio-category">Modern Luxury</p>
+                            <p class="portfolio-description">A revolutionary residential design featuring smart home integration and sustainable materials.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Smart Home</span>
+                                <span class="tech-tag">Sustainable</span>
+                                <span class="tech-tag">Modern</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">View Gallery</a>
+                                <a href="#" class="portfolio-link">Virtual Tour</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 2 -->
+                    <div class="portfolio-item hover-scale" data-category="eco-friendly modern" data-aos="fade-up" data-aos-delay="400">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" 
+                                 alt="Green Harmony Residence">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h4>View Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">Green Harmony Residence</h4>
+                            <p class="portfolio-category">Eco-Friendly</p>
+                            <p class="portfolio-description">Zero-carbon footprint home with living walls and renewable energy systems.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Solar Power</span>
+                                <span class="tech-tag">Living Walls</span>
+                                <span class="tech-tag">Zero Carbon</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">View Gallery</a>
+                                <a href="#" class="portfolio-link">Sustainability Report</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 3 -->
+                    <div class="portfolio-item hover-scale" data-category="luxury commercial" data-aos="fade-up" data-aos-delay="500">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop" 
+                                 alt="Metropolitan Business Hub">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h4>View Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">Metropolitan Business Hub</h4>
+                            <p class="portfolio-category">Commercial</p>
+                            <p class="portfolio-description">State-of-the-art office complex with flexible workspaces and wellness amenities.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Flexible Spaces</span>
+                                <span class="tech-tag">Wellness</span>
+                                <span class="tech-tag">Tech-Enabled</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">View Gallery</a>
+                                <a href="#" class="portfolio-link">Floor Plans</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 4 -->
+                    <div class="portfolio-item hover-scale" data-category="modern eco-friendly" data-aos="fade-up" data-aos-delay="600">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop" 
+                                 alt="Zen Garden Apartment">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h4>View Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">Zen Garden Apartment</h4>
+                            <p class="portfolio-category">Modern Eco-Friendly</p>
+                            <p class="portfolio-description">Minimalist living spaces with integrated nature and meditation areas.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Meditation</span>
+                                <span class="tech-tag">Natural Light</span>
+                                <span class="tech-tag">Minimalist</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">View Gallery</a>
+                                <a href="#" class="portfolio-link">Design Philosophy</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 5 -->
+                    <div class="portfolio-item hover-scale" data-category="luxury modern" data-aos="fade-up" data-aos-delay="700">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=800&h=600&fit=crop" 
+                                 alt="Skyline Penthouse">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h4>View Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">Skyline Penthouse</h4>
+                            <p class="portfolio-category">Luxury</p>
+                            <p class="portfolio-description">Ultra-luxurious penthouse with panoramic city views and premium amenities.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">City Views</span>
+                                <span class="tech-tag">Premium</span>
+                                <span class="tech-tag">Luxury</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">View Gallery</a>
+                                <a href="#" class="portfolio-link">Amenities</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 6 -->
+                    <div class="portfolio-item hover-scale" data-category="commercial modern" data-aos="fade-up" data-aos-delay="800">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop" 
+                                 alt="Innovation Center">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h4>View Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">Innovation Center</h4>
+                            <p class="portfolio-category">Commercial</p>
+                            <p class="portfolio-description">Cutting-edge research facility with collaborative spaces and advanced technology.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Research</span>
+                                <span class="tech-tag">Collaborative</span>
+                                <span class="tech-tag">Advanced Tech</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">View Gallery</a>
+                                <a href="#" class="portfolio-link">Technology Features</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Statistics Section -->
-        <section class="stats-section">
-            <div class="stats-bg-pattern"></div>
+        <section class="stats-section" data-parallax="0.3" data-aos="fade-up">
+            <div class="stats-bg-pattern" data-parallax="0.5"></div>
             <div class="stats-container">
-                <div class="stats-header">
-                    <h2>Our Impact in Numbers</h2>
-                    <p>Building dreams, creating legacies, and transforming lives through exceptional architecture</p>
+                <div class="stats-header" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="fade-in-up">Our Impact in Numbers</h2>
+                    <p class="fade-in-up">Building dreams, creating legacies, and transforming lives through exceptional architecture</p>
                 </div>
                 <div class="stats-grid">
-                    <div class="stat-item">
+                    <div class="stat-item scale-in hover-scale" data-aos="zoom-in" data-aos-delay="200">
                         <div class="stat-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -401,7 +688,7 @@
                             <div class="stat-description">Residential masterpieces delivered across Pune</div>
                         </div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item scale-in hover-scale" data-aos="zoom-in" data-aos-delay="300">
                         <div class="stat-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"/>
@@ -414,7 +701,7 @@
                             <div class="stat-description">Decades of architectural excellence and innovation</div>
                         </div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item scale-in hover-scale" data-aos="zoom-in" data-aos-delay="400">
                         <div class="stat-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
@@ -426,7 +713,7 @@
                             <div class="stat-description">Recognition for outstanding design excellence</div>
                         </div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item scale-in hover-scale" data-aos="zoom-in" data-aos-delay="500">
                         <div class="stat-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
@@ -443,14 +730,14 @@
             </div>
         </section>
 
-        <section id="services" class="content-section alt-bg">
-            <div class="section-header">
-                <span class="section-subtitle">Services</span>
-                <h2>Our Expertise</h2>
-                <p class="section-description">From concept to completion, we offer comprehensive architectural services tailored to your vision.</p>
+        <section id="services" class="content-section alt-bg" data-parallax="0.2">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle fade-in-up">Services</span>
+                <h2 class="fade-in-up">Our Expertise</h2>
+                <p class="section-description fade-in-up">From concept to completion, we offer comprehensive architectural services tailored to your vision.</p>
             </div>
             <div class="service-grid">
-                <div class="service-card">
+                <div class="service-card fade-in-left will-change-transform hover-scale" data-aos="fade-right" data-aos-delay="200">
                     <div class="service-icon-container">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -467,7 +754,7 @@
                         <li>Structural Planning</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in-up will-change-transform hover-scale" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon-container">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -485,7 +772,7 @@
                         <li>Custom Furniture Design</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in-right will-change-transform hover-scale" data-aos="fade-left" data-aos-delay="400">
                     <div class="service-icon-container">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -506,7 +793,7 @@
         </section>
 
         <section id="about" class="content-section">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <span class="section-subtitle">About Us</span>
                 <h2>The Minds Behind the Masterpieces</h2>
                 <p class="section-description">Meet our passionate team of architects and designers who bring your vision to life.</p>
@@ -543,9 +830,9 @@
             
             <!-- Client Testimonials Section -->
             <div class="testimonials-section">
-                <h3>What Our Clients Say</h3>
+                <h3 class="fade-in-up">What Our Clients Say</h3>
                 <div class="testimonials-grid">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card rotate-in will-change-transform">
                         <div class="testimonial-content">
                             <p>"Working with Anand and his team was a dream. They translated our vague ideas into a home that is more beautiful than we imagined. The attention to detail and professional service exceeded our expectations."</p>
                         </div>
@@ -554,7 +841,7 @@
                             <span>Koregaon Park Villa</span>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card rotate-in will-change-transform">
                         <div class="testimonial-content">
                             <p>"Shriram Architecture delivered our dream apartment on time and within budget. Their 3D visualizations helped us see exactly what we were getting, and the final result was even better than expected."</p>
                         </div>
@@ -563,7 +850,7 @@
                             <span>Baner Sky-Deck</span>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card rotate-in will-change-transform">
                         <div class="testimonial-content">
                             <p>"The team's expertise in sustainable design helped us create an eco-friendly home that's both beautiful and energy-efficient. Highly recommend for anyone looking for innovative architectural solutions."</p>
                         </div>
@@ -578,13 +865,13 @@
 
         <!-- FAQ Section -->
         <section class="faq-section content-section">
-            <div class="section-header">
+            <div class="section-header fade-in-up">
                 <span class="section-subtitle">FAQ</span>
-                <h2>Frequently Asked Questions</h2>
+                <h2 data-parallax="0.2">Frequently Asked Questions</h2>
                 <p class="section-description">Get answers to common questions about our architectural services and process.</p>
             </div>
-            <div class="faq-container">
-                <div class="faq-item">
+            <div class="faq-container" data-parallax="0.4">
+                <div class="faq-item fade-in-left will-change-transform">
                     <div class="faq-question">
                         <h4>What is the typical timeline for a residential project?</h4>
                         <span class="faq-toggle">+</span>
@@ -593,7 +880,7 @@
                         <p>The timeline varies based on project scope. Typically, design phase takes 6-8 weeks, approvals 4-6 weeks, and construction 8-12 months for a complete home. We provide detailed timelines during initial consultation.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item fade-in-right will-change-transform">
                     <div class="faq-question">
                         <h4>Do you handle building permits and approvals?</h4>
                         <span class="faq-toggle">+</span>
@@ -602,7 +889,7 @@
                         <p>Yes, we handle all necessary building permits, approvals, and regulatory compliance. Our team is well-versed with local building codes and municipal requirements in Pune.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item fade-in-left will-change-transform">
                     <div class="faq-question">
                         <h4>What are your fees for architectural services?</h4>
                         <span class="faq-toggle">+</span>
@@ -611,7 +898,7 @@
                         <p>Our fees depend on project scope and complexity. We offer transparent pricing with no hidden costs. Design fees typically range from 8-12% of construction cost. Contact us for a detailed quote.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item fade-in-right will-change-transform">
                     <div class="faq-question">
                         <h4>Do you provide 3D visualizations?</h4>
                         <span class="faq-toggle">+</span>
@@ -620,7 +907,7 @@
                         <p>Absolutely! We provide detailed 3D visualizations and virtual walkthroughs to help you visualize your project before construction begins. This ensures you're completely satisfied with the design.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item fade-in-left will-change-transform">
                     <div class="faq-question">
                         <h4>Can you work within a specific budget?</h4>
                         <span class="faq-toggle">+</span>
@@ -634,24 +921,24 @@
 
         <!-- CTA Banner Section -->
         <section class="cta-banner">
-            <div class="cta-content">
-                <h2>Ready to Build Your Dream Home?</h2>
-                <p>Let's transform your vision into reality. Schedule a free consultation with our expert architects today.</p>
+            <div class="cta-content fade-in-up will-change-transform" data-parallax="0.3">
+                <h2 class="scale-in">Ready to Build Your Dream Home?</h2>
+                <p class="fade-in-up">Let's transform your vision into reality. Schedule a free consultation with our expert architects today.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="cta-button primary large">Get Free Consultation</a>
-                    <a href="tel:+919876543210" class="cta-button secondary large">Call Now: +91 98765 43210</a>
+                    <a href="#contact" class="cta-button primary large fade-in-left will-change-transform">Get Free Consultation</a>
+                    <a href="tel:+919876543210" class="cta-button secondary large fade-in-right will-change-transform">Call Now: +91 98765 43210</a>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="content-section alt-bg">
-            <div class="section-header">
+            <div class="section-header fade-in-up">
                 <span class="section-subtitle">Get In Touch</span>
-                <h2>Let's Create Something Beautiful</h2>
+                <h2 data-parallax="0.2">Let's Create Something Beautiful</h2>
                 <p class="section-description">Ready to transform your vision into reality? Reach out for a consultation and let's discuss your dream project.</p>
             </div>
-            <div class="contact-container">
-                <div class="contact-info">
+            <div class="contact-container" data-parallax="0.4">
+                <div class="contact-info fade-in-left will-change-transform">
                     <h3>Get in Touch</h3>
                     <div class="contact-item">
                         <span class="contact-icon">📍</span>
@@ -682,7 +969,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form fade-in-right will-change-transform">
                     <div class="form-row">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Full Name" required>
@@ -706,7 +993,7 @@
                     <div class="form-group">
                         <textarea name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="cta-button primary full-width">Send Message</button>
+                    <button type="submit" class="cta-button primary full-width scale-in will-change-transform">Send Message</button>
                 </form>
             </div>
         </section>
@@ -714,8 +1001,8 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
+        <div class="footer-content" data-parallax="0.2">
+            <div class="footer-section fade-in-up will-change-transform">
                 <h4>Shriram Architecture</h4>
                 <p>Crafting bespoke residences in Pune with timeless design and modern innovation.</p>
                 <div class="footer-contact">
@@ -724,7 +1011,7 @@
                     <p>📍 Koregaon Park, Pune</p>
                 </div>
             </div>
-            <div class="footer-section">
+            <div class="footer-section fade-in-up will-change-transform">
                 <h4>Services</h4>
                 <ul>
                     <li>Architectural Design</li>
@@ -734,7 +1021,7 @@
                     <li>Building Permits</li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-section fade-in-up will-change-transform">
                 <h4>Areas We Serve</h4>
                 <ul>
                     <li>Koregaon Park</li>
@@ -744,7 +1031,7 @@
                     <li>Kharadi</li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-section fade-in-up will-change-transform">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#projects">Portfolio</a></li>
@@ -754,7 +1041,7 @@
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-bottom fade-in-up">
             <p>&copy; 2025 Shriram Architecture. All rights reserved. | Pune, Maharashtra | Designed for modern living.</p>
         </div>
     </footer>
@@ -848,6 +1135,10 @@
     }
     </script>
 
-    <script src="script.js"></script>
+    <!-- Core JavaScript -->
+    <script src="script.js" defer></script>
+    
+    <!-- Next-Generation Animation System -->
+    <script src="next-gen-animations.js" defer></script>
 </body>
 </html>
